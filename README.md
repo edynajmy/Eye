@@ -1,57 +1,26 @@
-# 🎵 Floating Lyrics Cards
+# Eye → Space 👁️
 
-A Python and Pygame animation that displays **8 lyric lines** in
-floating cards, with a typewriter effect, alternating black-and-white
-designs, and an animated binary dinosaur at the end.
+A generative ASCII art animation in Python that brings a single eye to life: it opens, blinks, and then the camera dives into the pupil, flying through a twinkling starfield and into a glowing heart-shaped nebula, all drawn with text characters and no images.
 
-## Lyrics
+<p align="center">
+  <img src="image/eye.png" width="700" alt="Eye Screenshot">
+</p>
 
-1.  When I'm walkin' with you
-2.  I watch the whole room change
-3.  Baby, that's what you do
-4.  No, my baby, don't play
-5.  Blame it on my confidence
-6.  Oh, blame it on your measurements
-7.  Shut that shit down on sight
-8.  That's right
 
 ## Features
-
--   Floating cards with random horizontal positions
--   Upward movement and typewriter text animation
--   Alternating black-and-white card styles
--   Animated binary dinosaur ending
--   Press **Esc** to exit
-
-## Requirements
-
--   Python 3.13
--   Pygame
--   Windows recommended
+- **Procedural ASCII Rendering:** Builds the skin, iris, eyebrow hair, stars and nebula from NumPy noise and math instead of image files, then converts every frame into text by mapping brightness to a dark-to-bright character ramp.
+- **Timeline-Driven Animation:** Smoothly eases through distinct phases: eyelid opening, blinking, wandering gaze, zooming into the pupil, and a nebula that morphs from a round cloud into a heart.
+- **Layered Eye Model:** Combines eyelids, amber iris fibers, sclera veins, catchlights, eyelid crease and individually stamped eyelashes, with a pupil that acts as a portal to space.
+- **Space FX & Bloom:** Features 3,200 twinkling stars flying toward the camera, shooting stars with fading tails, a slow comet, sparkle rays on bright stars, and a soft glow around bright areas.
+- **Interactive GUI & Smart Redrawing:** Interactive Tkinter window with keyboard controls (`R`, `Esc`) that only redraws the cells that changed, automatically adapting to your computer's speed.
+- **Included Glossary:** `Glossary.txt` explains every constant, function, variable and abbreviation used in `eye.py`, so you can read it side by side with the code.
 
 ## How to Run
 
-Install Pygame:
+```bash
+# Install the only dependency (Tkinter comes bundled with Python)
+pip install numpy
 
-``` powershell
-py -3.13 -m pip install pygame
+# Run the animation
+python eye.py
 ```
-
-Open the project folder in VS Code, then run:
-
-``` powershell
-py -3.13 song.py
-```
-
-## Customization
-
-Edit `LYRICS` to change the text, `LINE_DELAYS_SECONDS` to adjust the
-delay between cards, and `SPEED_MULTIPLIER` to change the animation
-speed.
-
-> **Note:** This version does not play an MP3 or sync lyrics to audio.
-> Lyrics appear according to programmed delays.
-
-------------------------------------------------------------------------
-
-**Built with Python and Pygame.**
